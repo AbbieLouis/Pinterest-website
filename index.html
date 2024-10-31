@@ -9,6 +9,7 @@
             --primary: #e60023;
             --text-dark: #333;
             --background-light: #f4f4f4;
+            --highlight: #ff4500;
         }
 
         * {
@@ -18,45 +19,79 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             background-color: var(--background-light);
             color: var(--text-dark);
         }
 
         .preview-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            padding: 40px;
         }
 
         .section {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
             padding-bottom: 20px;
-        }
-
-        .section-title {
-            color: var(--primary);
-            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
         }
 
         .hero-preview {
             text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .hero-subtitle {
+            font-size: 1.2rem;
             color: var(--text-dark);
-            margin-bottom: 10px;
+            max-width: 800px;
+            margin: 0 auto 15px;
         }
 
         .highlight-subtitle {
+            font-size: 1.3rem;
+            color: var(--highlight);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
             color: var(--primary);
-            font-weight: bold;
-            margin-bottom: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .stats-preview {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .stats-preview > div {
+            flex: 1;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+
+        .stats-preview .stat-number {
+            font-size: 2rem;
+            color: var(--primary);
+            font-weight: 700;
         }
 
         .video-grid {
@@ -67,15 +102,17 @@
 
         .video-container {
             text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 10px;
         }
 
         .video-wrapper iframe {
@@ -87,36 +124,76 @@
         }
 
         .video-title {
+            padding: 10px;
             font-weight: 600;
-            color: var(--text-dark);
+            background-color: #f1f1f1;
+        }
+
+        .benefits-preview {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .benefit-preview {
+            flex: 1;
+            margin: 0 15px;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
         }
 
         .cta-preview {
             text-align: center;
             background-color: var(--primary);
             color: white;
-            padding: 20px;
-            border-radius: 5px;
+            padding: 30px;
+            border-radius: 10px;
         }
 
         .cta-button {
             display: inline-block;
             background-color: white;
             color: var(--primary);
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 1.1rem;
             margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f4f4f4;
+            transform: translateY(-3px);
         }
     </style>
 </head>
 <body>
     <div class="preview-container">
         <div class="section hero-preview">
-            <h1 class="section-title">Master Pinterest Traffic - Premium Tutorial Series</h1>
+            <h1 class="hero-title">Master Pinterest Traffic - Premium Tutorial Series</h1>
             <p class="hero-subtitle">Learn the exact strategies we use to generate millions of monthly visitors using Pinterest's hidden features</p>
             <p class="highlight-subtitle">Do not let Google updates pull you down to ZER0</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Performance Stats</h2>
+            <div class="stats-preview">
+                <div>
+                    <div class="stat-number">1M+</div>
+                    <div>Monthly Visitors</div>
+                </div>
+                <div>
+                    <div class="stat-number">97%</div>
+                    <div>Success Rate</div>
+                </div>
+                <div>
+                    <div class="stat-number">4.9/5</div>
+                    <div>User Rating</div>
+                </div>
+            </div>
         </div>
 
         <div class="section">
@@ -171,16 +248,16 @@
 
         <div class="section">
             <h2 class="section-title">Key Benefits</h2>
-            <div class="benefits-preview" style="display: flex; justify-content: space-between;">
-                <div class="benefit-preview" style="flex: 1; margin: 0 10px; text-align: center;">
+            <div class="benefits-preview">
+                <div class="benefit-preview">
                     <h3>Detailed Analytics</h3>
                     <p>Deep insights into Pinterest performance</p>
                 </div>
-                <div class="benefit-preview" style="flex: 1; margin: 0 10px; text-align: center;">
+                <div class="benefit-preview">
                     <h3>Boost Visibility</h3>
                     <p>Increase pin reach and engagement</p>
                 </div>
-                <div class="benefit-preview" style="flex: 1; margin: 0 10px; text-align: center;">
+                <div class="benefit-preview">
                     <h3>Grow Audience</h3>
                     <p>Convert users into website visitors</p>
                 </div>
@@ -193,4 +270,4 @@
         </div>
     </div>
 </body>
-                </html>
+    </html>
